@@ -8,9 +8,59 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/play_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_below="@+id/load_button"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="117dp"
+        android:layout_toRightOf="@+id/prev_button"
+        android:text="@string/play_button" />
+
+    <Button
+        android:id="@+id/prev_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/play_button"
+        android:layout_alignBottom="@+id/play_button"
+        android:layout_alignParentLeft="true"
+        android:text="@string/prev_button" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/play_button"
+        android:layout_alignBottom="@+id/play_button"
+        android:layout_alignParentRight="true"
+        android:text="@string/next_button" />
+
+    <Button
+        android:id="@+id/load_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/play_button"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="106dp"
+        android:text="@string/load_button" />
+
+    <TextView
+        android:id="@+id/Song_title"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:singleLine="true"
+	    android:ellipsize="marquee" 
+	    android:marqueeRepeatLimit="marquee_forever"
+	    android:scrollHorizontally="true" 
+        android:layout_above="@+id/prev_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/next_button"
+        android:layout_marginBottom="18dp"
+        android:text="Song Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:focusable="true" 
+	    android:focusableInTouchMode="true" 
+	    android:freezesText="true" />
 
 </RelativeLayout>
